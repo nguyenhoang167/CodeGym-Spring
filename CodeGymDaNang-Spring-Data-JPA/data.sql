@@ -1,18 +1,13 @@
-drop database test;
-create database test;
+drop database todo;
+create database todo;
 
-use test;
+use todo;
 
-drop table employee;
-create table employee (
+drop table todo;
+create table todo (
     id int auto_increment primary key,
-    firstName varchar(80),
-    lastName varchar(80),
-    email varchar(80),
-    salary int,
-    dayOfBirth varchar(10)
+    name varchar(80),
+    description varchar(80),
+    createdAt date,
+    updatedAt date
 );
-
-insert into employee(firstName, lastName, email, salary, dayOfBirth) values
-("hoang", "nguyen", "hoang.nguyen@vnuk.edu.vn", 1000000, "17071997"),
-("tran", "viet thanh", "thanh.trangviet@vnuk.edu.vn", 3000000, "09011998");
